@@ -1,0 +1,211 @@
+FONT {
+FONT-FAMILY: Verdana,Helvetica; 
+FONT-SIZE: 11px
+}
+TD {
+FONT-FAMILY: Verdana,Helvetica; 
+FONT-SIZE: 11px
+}
+BODY {
+FONT-FAMILY: Verdana,Helvetica; 
+FONT-SIZE: 11px
+}
+P {
+FONT-FAMILY: 
+Verdana,Helvetica; 
+FONT-SIZE: 11px
+}
+DIV {
+FONT-FAMILY: Verdana,Helvetica; 
+FONT-SIZE: 11px
+}
+
+/* Form elements */
+
+input{
+margin-bottom:2px;
+margin-top:2px;
+text-indent:2px
+}
+
+input,textarea,select{
+border-color:#000000;
+color:#000000;
+font-size:12px
+}
+
+/* Fancy form styles for IE */
+input,textarea,select{
+background: #ffffff;
+border-width:1px;
+font:normal 12px Verdana,Arial,Helvetica,sans-serif
+}
+
+/* The buttons used for bbCode styling in message post */
+input.button{
+background:#fafafa;
+color:#000000
+}
+input.catbutton{
+background:#fafafa;
+color:#000000;
+font-size:11px
+}
+/* None-bold submit button */
+input.liteoption{
+background: #fafafa;
+color:#000000
+}
+/* The main submit button option */
+input.mainoption{
+background:#fafafa;
+color:#000000;
+font-weight:bold
+}
+/* The text input fields background colour */
+input.post,textarea.post,select{
+background: #ffffff;
+color:#000000
+}
+
+/* This is the line in the posting page which shows the rollover
+help line. This is actually a text box,but if set to be the same
+colour as the background no one will know;)
+*/
+.helpline{
+background:#e1e9f2;
+border-style:none;
+color:#000000
+}
+
+/* Quote & Code blocks */
+.code{
+background:#fafafa;
+border:1px solid #d1d7dc;
+color:#006600; 
+font:12px Courier,"Courier New",sans-serif;
+padding:5px
+}
+.quote{
+background:#fafafa;
+border:1px solid #d1d7dc;
+color:#444444; 
+font:12px/125% Verdana,Arial,Helvetica,sans-serif
+}
+
+.bodyline{
+background: #f7f8fc;
+color:#000000;
+border:1px solid #98aab1
+}
+body{
+background:#ecf0f6;
+color:#000000;
+font:13px Verdana,Arial,Helvetica,sans-serif
+}
+hr{
+border: 0px solid #ffffff;
+border-top-width:1px;
+height:0px
+}
+
+a:link,a:active,a:visited,a.postlink{
+color:#32475f;
+text-decoration:none
+}
+a:hover,a.topictitle:hover{
+color:#839fbc;
+text-decoration:underline
+}
+.title {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 15px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+.content {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 11px; 
+FONT-FAMILY: Verdana, Helvetica
+}
+.block-title {
+BACKGROUND: none; 
+COLOR: #516A88; 
+FONT-SIZE: 11px; 
+FONT-FAMILY: Verdana, Helvetica
+}
+.storytitle {
+BACKGROUND: none; 
+COLOR: #516A88; 
+FONT-SIZE: 13px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+.storycat {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 13px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: underline
+}
+.boxtitle {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 11px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+.boxcontent {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 11px; 
+FONT-FAMILY: Verdana, Helvetica
+}
+.option {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 11px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+.tiny {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 11px; 
+FONT-WEIGHT: normal; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+.small {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 10px; 
+FONT-WEIGHT: normal; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+h1 { 
+BACKGROUND: none; 
+COLOR: #516A88; 
+FONT-SIZE: 15px; 
+FONT-FAMILY:Verdana, Helvetica; 
+}
+h2 {
+BACKGROUND: none; 
+COLOR: #000000; 
+FONT-SIZE: 13px; 
+FONT-FAMILY:Verdana, Helvetica;
+}
+.crveno {
+BACKGROUND: none; 
+COLOR: #FF0000; 
+FONT-SIZE: 11px;
+FONT-FAMILY: Verdana, Helvetica; 
+}

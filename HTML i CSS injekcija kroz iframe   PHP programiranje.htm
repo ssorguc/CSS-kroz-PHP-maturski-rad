@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/ -->
+<html lang="sr"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>HTML i CSS injekcija kroz iframe | PHP programiranje</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/style.css">
+<link rel="pingback" href="http://mojphp.wordpress.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://s2.wp.com/wp-content/themes/pub/twentyeleven/js/html5.js?m=1354160568g" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="PHP programiranje » dovod" href="http://mojphp.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="PHP programiranje » dovod komentara" href="http://mojphp.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="PHP programiranje » dovod komentara na HTML i CSS injekcija kroz iframe" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/feed/">
+<script src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/wl"></script><script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Va\u0161a prijava nije uspela, molimo vas da poku\u0161ate ponovo sa valjanom adresom e-po\u0161te."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/style(1).css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mojphp.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mojphp.wordpress.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="PHP i programerski infografici" href="http://mojphp.wordpress.com/2012/03/23/27/">
+<link rel="next" title="Liga šampiona 1/4 finale 2012" href="http://mojphp.wordpress.com/2012/03/27/liga-sampiona-14-finale-2012/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/HTML i CSS injekcija kroz iframe   PHP programiranje.htm">
+<link rel="shortlink" href="http://wp.me/p2j57k-x">
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fmojphp.wordpress.com%2F2012%2F03%2F26%2Fhtml-i-css-injekcija-kroz-iframe%2F&for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fmojphp.wordpress.com%2F2012%2F03%2F26%2Fhtml-i-css-injekcija-kroz-iframe%2F&for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML i CSS injekcija kroz iframe">
+<meta property="og:url" content="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/">
+<meta property="og:description" content="Odmah da se ogradim od primene ove skripte na maliciozne aktivnosti. Ovde je pre svega reč o developer skripti koja može biti vrlo korisna za real time kodovanje. Bukvalno se uneti kod instant prik...">
+<meta property="og:site_name" content="PHP programiranje">
+<meta property="og:image" content="http://img.youtube.com/vi/MhODHoaats0/0.jpg">
+<meta property="og:image:secure_url" content="https://img.youtube.com/vi/MhODHoaats0/0.jpg">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g">
+<link rel="openid.server" href="http://mojphp.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://mojphp.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://mojphp.wordpress.com/osd.xml" title="PHP programiranje">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+<meta name="application-name" content="PHP programiranje"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="razni php, html, css primeri i tutorijali"><meta name="msapplication-task" content="name=Prijava;action-uri=http://mojphp.wordpress.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Otvorite nalog za besplatan blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com podrška;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com forumi;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="title" content="HTML i CSS injekcija kroz iframe | PHP programiranje on WordPress.com">
+<meta name="description" content="Odmah da se ogradim od primene ove skripte na maliciozne aktivnosti. Ovde je pre svega reč o developer skripti koja može biti vrlo korisna za real time kodovanje. Bukvalno se uneti kod instant prikazuje na browseru. Unostine kod u jednom prozoru i u realnom vremenu u drugom možete da vidite rezultate bez potrebe za refrešovanjem.…">
+
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/google_service.js">
+</script>
+<script type="text/javascript">
+if ( typeof GS_googleAddAdSenseService == 'function' ) { GS_googleAddAdSenseService("ca-pub-3443918307802676"); }
+if ( typeof GS_googleEnableAllServices == 'function' ) { GS_googleEnableAllServices() };
+</script><script src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/google_ads.js"></script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/amzn_ads.js"></script>
+<script type="text/javascript">
+try { amznads.getAds("3033","300x250"); } catch(e) { /* ignore */ }
+</script><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/bid"></script>
+<script type="text/javascript">
+var amznKeys = amznads.getKeys();
+if (typeof amznKeys != "undefined" && amznKeys != "") { for (var i =0; i < amznKeys.length; i++) { var key = amznKeys[i]; GA_googleAddAttr("amzn", key);} }
+document.close();
+</script>
+<script type="text/javascript">
+if ( typeof GA_googleAddSlot == 'function' ) { GA_googleAddSlot("ca-pub-3443918307802676", "wpcom_below_post"); }
+</script>
+<script type="text/javascript">
+if ( typeof GA_googleFetchAds == 'function' ) { GA_googleFetchAds(); }
+</script>
+
+<script type="text/javascript">
+var wpcom_ads = { bid: 34100578, pt: 'permalink', wa: 0, as: 0, domain: 'mojphp.wordpress.com', url: 'http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/', gid: '', };
+</script>
+<style id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ga.js"></script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/osd.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/services.css"><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/sf_main.jsp"></script><script type="text/javascript" charset="UTF-8" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/l.js"></script><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/sf_preloader.jsp"></script><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/sf_code.jsp"></script><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/base_single_icon.js"></script><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/get.jsp"></script><script src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ngram_id_dict.json" id="SF_ngram_call" type="text/javascript"></script><script type="text/javascript" async="" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource(2)"></script></head>
+
+<body class="single single-post postid-33 single-format-standard mp6 single-author singular two-column right-sidebar highlander-enabled highlander-light" style="">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://mojphp.wordpress.com/" title="PHP programiranje" rel="home" sl-processed="1">PHP programiranje</a></span></h1>
+				<h2 id="site-description">razni php, html, css primeri i tutorijali</h2>
+			</hgroup>
+
+						<a href="http://mojphp.wordpress.com/" sl-processed="1">
+									<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/cropped-big_a750f34a101df74c9808778a31f3565a1838537f.jpg" width="1000" height="288" alt="">
+							</a>
+			
+								<form method="get" id="searchform" action="http://mojphp.wordpress.com/">
+		<label for="s" class="assistive-text">Pretraga</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Pretraga">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Pretraga">
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Glavni izbornik</h3>
+								<div class="skip-link"><a class="assistive-text" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#content" title="Skoči na primarni sadržaj" sl-processed="1">Skoči na primarni sadržaj</a></div>
+				<div class="skip-link"><a class="assistive-text" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#secondary" title="Skoči na sekundarni sadržaj" sl-processed="1">Skoči na sekundarni sadržaj</a></div>
+								<div class="menu-meni-container"><ul id="menu-meni" class="menu"><li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8"><a href="http://mojphp.wordpress.com/" sl-processed="1">Početna</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-10"><a href="http://mojphp.wordpress.com/category/tutorijali/" sl-processed="1">Tutorijali</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9"><a href="http://mojphp.wordpress.com/category/beleznica/" sl-processed="1">Beležnica</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://mojphp.wordpress.com/o-meni-2/" sl-processed="1">O meni</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Kretanje članaka</h3>
+						<span class="nav-previous"><a href="http://mojphp.wordpress.com/2012/03/23/27/" rel="prev" sl-processed="1"><span class="meta-nav">←</span> Previous</a></span>
+						<span class="nav-next"><a href="http://mojphp.wordpress.com/2012/03/27/liga-sampiona-14-finale-2012/" rel="next" sl-processed="1">Next <span class="meta-nav">→</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-33" class="post-33 post type-post status-publish format-standard hentry category-tutorijali tag-css tag-html tag-javascript">
+	<header class="entry-header">
+		<h1 class="entry-title">HTML i CSS injekcija kroz&nbsp;iframe</h1>
+
+				<div class="entry-meta">
+						<span class="sep">Posted on </span><a href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/HTML i CSS injekcija kroz iframe   PHP programiranje.htm" title="8:40 am" rel="bookmark" sl-processed="1"><time class="entry-date" datetime="2012-03-26T08:40:43+00:00">mart 26, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://mojphp.wordpress.com/author/mojphp/" title="Vidi sve članke od php programiranje" rel="author" sl-processed="1">php programiranje</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Odmah da se ogradim od primene ove skripte na maliciozne aktivnosti. Ovde je pre svega reč o developer skripti koja može biti vrlo korisna za real time kodovanje. Bukvalno se uneti kod instant prikazuje na browseru. Unostine kod u jednom prozoru i u realnom vremenu u drugom možete da vidite rezultate bez potrebe za refrešovanjem. Sjajna fora.</p>
+<p>Pogledajte klip u kome je sve detaljno objašnjeno, a <a href="https://github.com/NETTUTS/Inject-HTML-and-CSS-into-iFrame/blob/master/iframe.html" target="_blank" sl-processed="1">ovde</a> možete da preuzmete javascript skriptu pomoću koje je sve ovo moguće.</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="584" height="359" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/MhODHoaats0.htm" frameborder="0"></iframe></span>
+<p>Do sledećeg teksta <img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+<div class="wpa" style="position: relative; width:300px; text-align: center; padding: 0; margin: 10px auto; overflow: hidden; clear: both;">
+<a style="position: absolute; text-align: left; display: block; font: 9px/1 sans-serif; text-decoration: underline;" href="http://en.wordpress.com/about-these-ads/" rel="nofollow" sl-processed="1">About these ads</a>
+<script type="text/javascript">
+		var wpcom_adclk_hovering = false;
+		var wpcom_adclk_recorded = false;
+		var wpcom_adclk_theme = "Twenty Eleven";
+		var wpcom_adclk_slot = "wpcom_below_post";
+		var wpcom_adclk_network = ( typeof wpcom_adclk_network === "undefined" ) ? "" : wpcom_adclk_network ;
+
+		jQuery(document).ready( function() {
+			function wpcom_adclk_hover_yes() { wpcom_adclk_hovering = true; }
+			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }
+			jQuery(".wpa").click(wpcom_adclk_click);
+			jQuery(".wpa iframe").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+			jQuery(".wpa object").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+
+			jQuery(window).blur( function() {
+				if ( wpcom_adclk_hovering ) { wpcom_adclk_click(); }
+			});
+		});
+
+		function wpcom_adclk_impression() {
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_imp_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_imp_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_imp_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_imp_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			return true;
+		}
+
+		function wpcom_adclk_click() {
+			if (wpcom_adclk_recorded) { return true; } // no double counting
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_click_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_click_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_click_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_click_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			wpcom_adclk_recorded = true;
+			var now=new Date(); var end=now.getTime()+250;
+			while(true){now=new Date();if(now.getTime()>end){break;}}
+			return true;
+		}
+	
+if ( typeof GA_googleAddAttr == 'function' ) {
+GA_googleAddAttr("AdOpt", "1");
+GA_googleAddAttr("Origin", "extsearch");
+GA_googleAddAttr("LangId", "67");
+GA_googleAddAttr("Domain", "mojphp.wordpress.com");
+GA_googleAddAttr("BlogId", "34100578");
+GA_googleAddAttr("PageURL", "http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/");
+GA_googleAddAttr("Tag", "tutorijali");
+GA_googleAddAttr("Tag", "css");
+GA_googleAddAttr("Tag", "html");
+GA_googleAddAttr("Tag", "javascript");
+GA_googleAddAttr("theme_bg", "ffffff");
+GA_googleAddAttr("theme_border", "dddddd");
+GA_googleAddAttr("theme_text", "333333");
+GA_googleAddAttr("theme_link", "1bafe0");
+GA_googleAddAttr("theme_url", "1bafe0");
+GA_googleAddAdSensePageAttr("google_page_url", "http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/");
+GA_googleFillSlot("wpcom_below_post");
+}
+</script><script src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ads"></script><div id="google_ads_div_wpcom_below_post_ad_wrapper">
+<div id="google_ads_div_wpcom_below_post_ad_container" style="display:inline-block;"><div id="grv-personalization-16" style="display: block; height: 250px; width: 100%; opacity: 1;"><iframe frameborder="0" scrolling="no" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/w2.htm" style="width: 100%; height: 250px; opacity: 1; overflow: hidden;"></iframe></div>
+<script type="text/javascript">
+  //<![CDATA[
+ function _grc(k){return(document.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+    (function(){
+    window.gravityInsightsParams = {
+      'type': 'content',
+      'site_guid': '361837bc83c4c2cba7b350dff56a564f',
+      'user_guid': _grc('grvinsights'),
+      'sourceUrl': 'mojphp.wordpress.com',
+    };
+    var b,c,d,e,f,g,h,i;f=(b=!0===gravityInsightsParams.useGravityUserGuid?1:0,e=b?"":gravityInsightsParams.user_guid||(null!=(g=/grvinsights=([^;]+)/.exec(document.cookie))?g[1]:void 0)||"",c=(null!=(h=window.jQuery)?null!=(i=h.fn)?i.jquery:void 0:void 0)||"","http://rma-api.gravity.com/v1/api/intelligence/wl?jq="+c+"&sg="+gravityInsightsParams.site_guid+"&ug="+e+"&ugug="+b+"&pl=16&id=grv-personalization-16&type=iframe");
+    window.grvMakeScript=function(j){var a;a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=j;return a};d=document.getElementsByTagName("script")[0];f&&d.parentNode.insertBefore(window.grvMakeScript(f),d);})();
+  //]]>
+</script>
+
+</div>
+</div>
+
+</div>
+<style type="text/css">
+div.wpa>div { margin-top: 1em; } #google_ads_div_wpcom_below_post_adsafe_ad_container { display: block !important; }
+</style>
+<script type="text/javascript">
+jQuery( window ).load( function() {
+    if ( jQuery(".wpa script[src*='shareth.ru']").length > 0 || jQuery(".wpa iframe[src*='boomvideo.tv']").length > 0 || jQuery(".wpa iframe[src*='viewablemedia.net']").length > 0 || jQuery(".wpa .sharethrough-placement").length > 0 ) {
+        jQuery( '.wpa' ).css( 'width', '400px' );
+    }
+setTimeout(function(){if(typeof GS_googleAddAdSenseService !== 'function'){new Image().src=document.location.protocol+"//stats.wordpress.com/g.gif?v=wpcom-no-pv&x_noads=adblock&baba="+Math.random()}},100);
+} );
+</script>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/?share=twitter&nb=1" title="Pritisnite da biste podelili na Tviteru" id="sharing-twitter-33" sl-processed="1"><span>Tviter</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/?share=facebook&nb=1" title="Podeli na Fejsbuku" id="sharing-facebook-33" sl-processed="1"><span>Fejsbuk</span></a></li><li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/?share=google-plus-1&nb=1" title="Click to share on Google+" id="sharing-google-33" sl-processed="1"><span>Google</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-34100578-33-52d265a72a06b" data-src="//widgets.wp.com/likes/#blog_id=34100578&amp;post_id=33&amp;origin=mojphp.wordpress.com&amp;obj_id=34100578-33-52d265a72a06b" data-name="like-post-frame-34100578-33-52d265a72a06b"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Sviđa mi se</span></span> <span class="loading">Učitavanje...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-34100578-33-52d265a72a06b" height="55px" width="100%" frameborder="0" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource.htm" style="display: inline;"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		Ovaj unos je objavljen pod <a href="http://mojphp.wordpress.com/category/tutorijali/" title="Vidi sve članke u Tutorijali" rel="category tag" sl-processed="1">Tutorijali</a> i označen sa <a href="http://mojphp.wordpress.com/tag/css/" rel="tag" sl-processed="1">css</a>, <a href="http://mojphp.wordpress.com/tag/html/" rel="tag" sl-processed="1">html</a>, <a href="http://mojphp.wordpress.com/tag/javascript/" rel="tag" sl-processed="1">javascript</a> od strane korisnika <a href="http://mojphp.wordpress.com/author/mojphp/" sl-processed="1">php programiranje</a>. Zabeležite <a href="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/HTML i CSS injekcija kroz iframe   PHP programiranje.htm" title="Stalna veza ka HTML i CSS injekcija kroz iframe" rel="bookmark" sl-processed="1">stalnu vezu</a>.		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-33 -->
+
+						<div id="comments">
+	
+	
+	
+									<div id="respond" class="comment-respond js">
+				<h3 id="reply-title" class="comment-reply-title">Ostavite odgovor <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#respond" style="display:none;" sl-processed="1">Odustani od odgovora</a></small></h3>
+									<form action="http://mojphp.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="0ace35f054"><input type="hidden" name="_wp_http_referer" value="/2012/03/26/html-i-css-injekcija-kroz-iframe/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea title="Unesite svoj komentar ovde..." placeholder="Unesite svoj komentar ovde..." style="height: 42px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 580px; line-height: 22px; text-decoration: none; letter-spacing: 0px;" tabindex="-1" aria-hidden="true"></textarea><textarea id="comment" name="comment" title="Unesite svoj komentar ovde..." placeholder="Unesite svoj komentar ovde..." style="height: 42px; resize: none; overflow-y: hidden;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Popunite detalje ispod ili pritisnite na ikonicu da biste se prijavili:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#comment-form-guest" id="postas-guest" title="Gost" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#comment-form-load-service:Twitter" id="postas-twitter" title="Tviter" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#comment-form-load-service:Facebook" id="postas-facebook" title="Fejsbuk" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource(7).htm" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank" sl-processed="1">				<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">E-pošta <span class="required">(obavezno)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Ime <span class="required">(obavezno)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Veb mesto</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/wplogo.png" alt="WordPress.com logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> Komentarišet koristeći svoj WordPress.com nalog. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );" sl-processed="1">Odjavite se</a>&nbsp;/&nbsp;<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Promeni</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ad516503a11cd5ca435acc9bb6523536" alt="Slika na Tviteru" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> Komentarišet koristeći svoj Twitter nalog. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );" sl-processed="1">Odjavite se</a>&nbsp;/&nbsp;<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Promeni</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ad516503a11cd5ca435acc9bb6523536" alt="Fejsbukova fotografija" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> Komentarišet koristeći svoj Facebook nalog. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );" sl-processed="1">Odjavite se</a>&nbsp;/&nbsp;<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Promeni</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> Komentarišet koristeći svoj Google+ nalog. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );" sl-processed="1">Odjavite se</a>&nbsp;/&nbsp;<a href="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Promeni</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();" sl-processed="1">Odustani</a></div>
+		<p>Povezivanje sa %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Želim da primam komentare koji uslede na svoju e-poštu.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Obavesti me o novim člancima preko e-pošte.</label></p></div>
+
+												<p class="form-submit" style="display: none;">
+							<input name="submit" type="submit" id="comment-submit" value="Predaj komentar">
+							<input type="hidden" name="comment_post_ID" value="33" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						
+<input type="hidden" name="genseq" value="1389520295">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="326d52f31c"></p><script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/form.js"></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="1389520299308"></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+				<a href="http://theme.wordpress.com/themes/twentyeleven/" title="Learn more about this theme" sl-processed="1">The Twenty Eleven Theme</a>. <span class="sep"> | </span>				<a href="http://sr.wordpress.com/?ref=footer" rel="generator" sl-processed="1">Blog na WordPress.com</a>.
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":"language.sr,type.wpcom,posttag.css,posttag.html,posttag.javascript,as"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript>&lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=language.sr%2Ctype.wpcom%2Cposttag.css%2Cposttag.html%2Cposttag.javascript%2Cas" height="1" width="1" alt="" /&gt;&lt;/div&gt;</noscript>
+
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Prijavljivanje\u2026","submittingText":"Predavanje komentart\u2026","postCommentText":"Predaj komentar","connectingToText":"Povezivanje sa %s","commentingAsText":"%1$s: Komentari\u0161ete koriste\u0107i svoj %2$s nalog.","logoutText":"Odjava","loginText":"Prijava","connectURL":"http:\/\/mojphp.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/mojphp.wordpress.com\/wp-login.php?action=logout&_wpnonce=c1cf76f3bb","homeURL":"http:\/\/mojphp.wordpress.com\/","postID":"33","gravDefault":"mystery","enterACommentError":"Molimo vas da unesete komentar","enterEmailError":"Please enter your email address here","invalidEmailError":"Neispravna adresa e-po\u0161te","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Prijavite se da biste koristili detalje sa jednog od ovih naloga.","change":"Promeni","changeAccount":"Promeni nalog","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource(3)"></script>
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: -263px;">
+		<a class="bsub" href="javascript:void(0)" sl-processed="1"><span id="bsub-text">Prati</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “PHP programiranje”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Dobijte svaki novi članak dostavljen u vaše poštansko sanduče.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+			
+			<p><input type="email" name="email" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter email address&quot; : this.value;" id="loggedout-follow-field"></p>
+
+			<input type="hidden" name="action" value="subscribe">
+			<input type="hidden" name="blog_id" value="34100578">
+			<input type="hidden" name="source" value="http://mojphp.wordpress.com/2012/03/26/html-i-css-injekcija-kroz-iframe/">
+			<input type="hidden" name="sub-type" value="loggedout-follow">
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="9cdd95cd4f"><input type="hidden" name="_wp_http_referer" value="/2012/03/26/html-i-css-injekcija-kroz-iframe/">
+			<p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p>
+			</form>
+					<div id="bsub-credit"><a href="http://wordpress.com/signup/?ref=lof" sl-processed="1">Pokreće WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "mojphp.wordpress.com";
+	</script>
+	<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/725X1342.skimlinks.js"></script>
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/mojphp.wordpress.com\/2012\/03\/26\/html-i-css-injekcija-kroz-iframe\/":33}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/master.htm" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/saved_resource(4)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'34100578','v':'wpcom','tz':'0','user_id':'0','post':'33','subd':'mojphp'});
+ex_go({'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMm5sQ1pXc095TWlsfDhWMEdpMiw/a2xWbVtIRFpJOWVFOGs9UC8wNk5zbFZpZGo/b3E0cmlaJVFQMSU1PW5fZzhpdlJ3YnJbdkEzLmo1cFN8VjNQR3RMQ21WdG5LS0ZaTjJITDJ5VWZiVFNRWWJRdGs9UGcsLFBCc0Jxa2dBUmxCNktuOEJmXy8wUDZZR1l0WTJLOXNvJkRsLm1ISHRJQmlrRnltQ01CYWExVV8mLnBOeFpSal8/JiZ6ck9oZVdBLzR2Ny00VFVJY3UyJjgvPTEwJV9SS04wby5vUW42b3k9bWp4Z0UxSUc0a0tdTl1nd0QyYVNRYg=='});
+addLoadEvent(function(){linktracker_init('34100578',33);});
+	</script><img id="wpstats" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/g.gif" alt=""><img id="wpstats2" src="./HTML i CSS injekcija kroz iframe   PHP programiranje_files/g(1).gif" alt="" style="display:none">
+<noscript>&lt;img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<iframe style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px; visibility: hidden;"></iframe><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg><iframe id="google_osd_static_frame_6499883716460" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

@@ -1,0 +1,298 @@
+(function(){var containers = [{"id":"grv-personalization-16","url":"http://rma-api.gravity.com/v1/api/intelligence/w2?sg=361837bc83c4c2cba7b350dff56a564f&pl=16&ug=&b=42&ad=&sp=332","width":"100.0%","height":"250px","siteGuid":"361837bc83c4c2cba7b350dff56a564f","placement":16,"userGuid":""}];
+/*
+  Provides GravityUtils.insertStyleBlock() to insert style blocks into the page. Especially useful in situations where
+  external stylesheets aren't feasible, or when styles need to be introduced for async loaded elements that aren't
+  present at the time of style determination.
+*/
+
+/*
+  @param {String} css The inner CSS content of the style block.
+*/
+
+if (!window.GravityUtils) {
+  window.GravityUtils = {};
+}
+
+if (!window.GravityUtils.insertStyleBlock) {
+  window.GravityUtils.insertStyleBlock = function(css) {
+    var head, style;
+    head = document.head || document.getElementsByTagName('head')[0];
+    style = document.createElement('style');
+    style.type = 'text/css';
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+    return head.appendChild(style);
+  };
+}
+
+/*
+  Shows the attribution modal, lazily initting it if necessary.
+
+  Can be called either from same window (JSONP widgets) or via postMessage from widget to widget loader (iframe widgets).
+
+  @requires insertStyleBlock.coffee
+*/
+
+window.grvShowAttributionModal = function($) {
+  var $box, $closeBtn, $document, $overlay, $window, bindOverlayEvents, closeDialog, closeOnEscape, maintainOverlaySize, openDialog, setOverlaySize, unbindOverlayEvents, _ref,
+    _this = this;
+  $window = $(window);
+  $document = $(document);
+  if ((_ref = this.isVisible) == null) {
+    this.isVisible = false;
+  }
+  if (!this.$overlay) {
+    GravityUtils.insertStyleBlock("#grv_attr_overlay {\n  background: rgb(0,0,0);\n  background: rgba(0,0,0,0.6);\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  z-index: 1000;\n  font-family: 'Source Sans Pro', 'helvetica neue', helvetica, sans-serif, arial;\n  display: none;\n}\n#grv_attr_box {\n  background: #fff url(http://i.api.grvcdn.com/personalization/gravity_com_logo.932f1275dd5d743c1ae799763120a12c.png) no-repeat center 30px;\n  border-radius: 4px;\n  -moz-border-radius: 4px;\n  -webkit-border-radius: 4px;\n  padding: 85px 30px 30px;\n  width: 330px;\n  text-align: center;\n  position: absolute;\n  display: none;\n}\n#grv_attr_box p.grv_p {\n  font-size: 15px;\n  line-height: 18px;\n  margin-bottom: 10px;\n  font-weight: 300;\n  color: #505050;\n}\na.grv_btn_blue {\n  background: #09f;\n  border-radius: 4px;\n  -moz-border-radius: 4px;\n  -webkit-border-radius: 4px;\n  color: #fff !important;\n  font-size: 16px;\n  font-weight: 200;\n  padding: 6px 12px;\n  outline: none;\n  text-decoration: none !important;\n}\na.grv_btn_blue:hover {\n  background: #f90;\n}\n#grv_attrib_close_btn {\n  background: #505050;\n  color: #fff;\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 15px;\n  font-weight: 100;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n  display: block;\n  border-radius: 30px;\n  -moz-border-radius: 30px;\n  -webkit-border-radius: 30px;\n  cursor: pointer;\n}\n#grv_attrib_close_btn:hover {\n  background: #09f;\n}");
+    this.$overlay = $("<div id=\"grv_attr_overlay\">\n  <div id=\"grv_attr_box\">\n    <p class=\"grv_p\">These stories are recommended for you by Gravity.</p>\n    <p class=\"grv_p\">The recommendations may include stories from other partners, some of whom pay to include their content here.</p>\n    <a href=\"http://www.gravity.com/consumers\" target=\"_blank\" class=\"grv_btn_blue\">Learn More</a>\n    <div id=\"grv_attrib_close_btn\">X</div>\n  </div>\n</div>").hide().appendTo('body');
+    this.$box = $('#grv_attr_box');
+    this.$closeBtn = $('#grv_attrib_close_btn');
+  }
+  $overlay = this.$overlay;
+  $box = this.$box;
+  $closeBtn = this.$closeBtn;
+  setOverlaySize = function() {
+    return $overlay.height($document.height()).width($document.width());
+  };
+  maintainOverlaySize = function() {
+    var _this = this;
+    if (this.resizeTimeoutHandle) {
+      clearTimeout(this.resizeTimeoutHandle);
+    }
+    return this.resizeTimeoutHandle = setTimeout((function() {
+      _this.resizeTimeoutHandle = null;
+      return setOverlaySize();
+    }), 50);
+  };
+  bindOverlayEvents = function() {
+    $window.resize(maintainOverlaySize);
+    $document.keyup(closeOnEscape);
+    $overlay.add($closeBtn).click(closeDialog);
+    return $box.click(function(e) {
+      return e.stopPropagation();
+    });
+  };
+  unbindOverlayEvents = function() {
+    $window.unbind('resize', maintainOverlaySize);
+    $document.unbind('keyup', closeOnEscape);
+    $overlay.add($closeBtn).unbind('click', closeDialog);
+    return $box.unbind('click');
+  };
+  closeDialog = function() {
+    _this.isVisible = false;
+    unbindOverlayEvents();
+    return $box.stop().fadeOut('fast', function() {
+      return $overlay.stop().fadeOut('slow');
+    });
+  };
+  closeOnEscape = function(e) {
+    if (e.which === 27) {
+      return closeDialog();
+    }
+  };
+  openDialog = function() {
+    _this.isVisible = true;
+    setOverlaySize();
+    $box.add($overlay).css('opacity', 0).show();
+    $box.css('top', $window.scrollTop() + $window.height() / 2 - $box.outerHeight() / 2);
+    $box.css('left', $window.scrollLeft() + $window.width() / 2 - $box.outerWidth() / 2);
+    bindOverlayEvents();
+    return $overlay.animate({
+      opacity: 1
+    }, 'slow', function() {
+      return $box.animate({
+        opacity: 1
+      }, 'fast', function() {
+        if (window.focus) {
+          window.focus();
+        }
+        if (document.activeElement && document.activeElement.blur) {
+          return document.activeElement.blur();
+        }
+      });
+    });
+  };
+  if (this.isVisible) {
+    return closeDialog();
+  } else {
+    return openDialog();
+  }
+};
+
+var documentElem, loadWidgets, _ref, _ref1,
+  __hasProp = {}.hasOwnProperty;
+
+documentElem = window.document.documentElement;
+
+/*
+  @param {Object} elem            Native DOM element.
+  @param {Number} inViewThreshold Square pixel area of element that must be in viewport in order to consider it in view.
+                                  Default is 100x100 square.
+
+  @return {Boolean}
+*/
+
+
+if ((_ref = window.grvElemInView) == null) {
+  window.grvElemInView = function(elem, inViewThreshold) {
+    var elemRect, heightInView, inView, widthInView, windowHeight, windowWidth;
+    if (inViewThreshold == null) {
+      inViewThreshold = 10000;
+    }
+    inView = false;
+    elemRect = elem.getBoundingClientRect();
+    windowHeight = documentElem.clientHeight;
+    if ((elemRect.top >= 0 && elemRect.top < windowHeight) || (elemRect.bottom >= 0 && elemRect.bottom < windowHeight) || (elemRect.top < 0 && elemRect.bottom >= windowHeight)) {
+      windowWidth = documentElem.clientWidth;
+      if ((elemRect.left >= 0 && elemRect.left < windowWidth) || (elemRect.right >= 0 && elemRect.right < windowWidth) || (elemRect.left < 0 && elemRect.right >= windowWidth)) {
+        widthInView = Math.min(elemRect.right, windowWidth) - Math.max(elemRect.left, 0);
+        heightInView = Math.min(elemRect.bottom, windowHeight) - Math.max(elemRect.top, 0);
+        if (widthInView * heightInView > inViewThreshold) {
+          inView = true;
+        }
+      }
+    }
+    return inView;
+  };
+}
+
+if ((_ref1 = window.grvPageViewId) == null) {
+  window.grvPageViewId = {
+    widgetLoaderWindowUrl: window.location.href,
+    timeMillis: new Date().getTime().toString(),
+    rand: Math.random().toString().replace('.', '').replace(/^0+/, '')
+  };
+}
+
+loadWidgets = function($) {
+  var $window, c, frameUrl, inputSourceUrl, postMessageSupported, receiveMessage, sourceUrl, url_to_iframe, _fn, _i, _len, _ref2, _ref3, _ref4;
+  $window = $(window);
+  postMessageSupported = !!window.postMessage;
+  url_to_iframe = {};
+  receiveMessage = function(event) {
+    var $iframe, decimalPart, iframeAndContainer, iframeElem, iframeSrc, intPart, is_maybe_our_message, matches, messageDomainMatches, msg, msg_data, msg_placement, msg_siteguid, msg_userid, onScroll, unit, url_data, _base, _ref2,
+      _this = this;
+    if (event.data && event.origin) {
+      msg_data = typeof (_base = event.data).split === "function" ? _base.split("|") : void 0;
+      is_maybe_our_message = ((msg_data != null ? msg_data.length : void 0) || 0) >= 4;
+      if (!is_maybe_our_message) {
+        return;
+      }
+      msg_siteguid = msg_data[0], msg_userid = msg_data[1], msg_placement = msg_data[2], msg = msg_data[3];
+      url_data = "" + msg_siteguid + "|" + msg_userid + "|" + msg_placement;
+      iframeAndContainer = url_to_iframe[url_data];
+      iframeSrc = iframeAndContainer != null ? iframeAndContainer.find('[src]').attr('src') : void 0;
+      messageDomainMatches = (iframeSrc != null ? iframeSrc.indexOf(event.origin) : void 0) === 0;
+      if (messageDomainMatches) {
+        $iframe = iframeAndContainer.filter('iframe');
+        iframeElem = $iframe[0];
+        if (msg === 'grv_show') {
+          iframeAndContainer.show();
+          iframeElem.contentWindow.postMessage('widgetShown', '*');
+          $window.bind('scroll', onScroll = function() {
+            if (grvElemInView(iframeElem)) {
+              $window.unbind('scroll', onScroll);
+              return iframeElem.contentWindow.postMessage('widgetInView', '*');
+            }
+          });
+          return onScroll();
+        } else if (msg === 'showAttrib') {
+          return window.grvShowAttributionModal($);
+        } else if (((_ref2 = (matches = /^setHeight:(\d+)(\.\d+)?(px|%)?/.exec(msg))) != null ? _ref2[1] : void 0) != null) {
+          intPart = matches[1];
+          decimalPart = matches[2] || '';
+          unit = matches[3] || 'px';
+          iframeAndContainer.height(intPart + decimalPart + unit);
+          iframeElem.contentWindow.postMessage('heightUpdated', '*');
+          if ($iframe.width() >= 2) {
+            $iframe.css('opacity', 1);
+            return $window.trigger('scroll');
+          }
+        }
+      }
+    }
+  };
+  inputSourceUrl = (_ref2 = window.gravityInsightsParams) != null ? (_ref3 = _ref2.sourceUrl) != null ? (_ref4 = _ref3.match(/^http.*/)) != null ? _ref4[0] : void 0 : void 0 : void 0;
+  sourceUrl = inputSourceUrl || window.location.href;
+  frameUrl = window.location.href;
+  _fn = function(c) {
+    var aolOmniPassThrough, aolOmniPassThroughJson, container, glid, htmlEncodedUrl, iframe, iframeAndContainer, key, url, url_data, val, _ref5;
+    aolOmniPassThroughJson = null;
+    if ('0' === '1' && window.s_265) {
+      aolOmniPassThrough = {};
+      if (window.s_265.prop14 != null) {
+        aolOmniPassThrough.prop14 = window.s_265.prop14;
+      }
+      if (window.s_265.prop10 != null) {
+        aolOmniPassThrough.prop10 = window.s_265.prop10;
+      }
+      if (window.s_265.pageURL != null) {
+        aolOmniPassThrough.pageURL = window.s_265.pageURL;
+      }
+      if (window.s_265.prop56 != null) {
+        aolOmniPassThrough.prop56 = window.s_265.prop56;
+      }
+      if (window.s_265.channel != null) {
+        aolOmniPassThrough.prop23 = window.s_265.channel;
+      }
+      if (window.s_265.eVar14 != null) {
+        aolOmniPassThrough.eVar14 = window.s_265.eVar14;
+      }
+      glid = (_ref5 = window.s_265) != null ? typeof _ref5.c_r === "function" ? _ref5.c_r('UNAUTHID') : void 0 : void 0;
+      if (glid != null) {
+        aolOmniPassThrough.glid = glid;
+      }
+      aolOmniPassThroughJson = '{' + ((function() {
+        var _results;
+        _results = [];
+        for (key in aolOmniPassThrough) {
+          if (!__hasProp.call(aolOmniPassThrough, key)) continue;
+          val = aolOmniPassThrough[key];
+          _results.push('"' + key.replace(/"/g, '\\"') + '":"' + val.toString().replace(/"/g, '\\"') + '"');
+        }
+        return _results;
+      })()).join(',') + '}';
+    }
+    url = ("" + c.url + "&sourceUrl=" + (encodeURIComponent(sourceUrl)) + "&frameUrl=" + (encodeURIComponent(frameUrl))) + ("&clientTime=" + (new Date().getTime()) + "&") + $.param({
+      'pageViewId[widgetLoaderWindowUrl]': window.grvPageViewId.widgetLoaderWindowUrl,
+      'pageViewId[timeMillis]': window.grvPageViewId.timeMillis,
+      'pageViewId[rand]': window.grvPageViewId.rand
+    }) + (document.referrer ? "&rr=" + (encodeURIComponent(document.referrer)) : '') + (aolOmniPassThrough ? "&aopt=" + (encodeURIComponent(aolOmniPassThroughJson)) : '');
+    htmlEncodedUrl = $('<p />').text(url).html();
+    iframe = $("<iframe frameBorder='0' scrolling='no' src='" + htmlEncodedUrl + "' />").css({
+      width: 1,
+      height: 1,
+      opacity: 0,
+      overflow: 'hidden'
+    }).load(function() {
+      iframeAndContainer.css('width', c.width).css('opacity', 1);
+      if (!postMessageSupported) {
+        iframeAndContainer.css('height', c.height);
+        return iframeAndContainer.show();
+      }
+    });
+    container = $("#" + c.id);
+    iframeAndContainer = iframe.add(container).hide();
+    iframe.appendTo(container);
+    if (postMessageSupported) {
+      url_data = "" + c.siteGuid + "|" + c.placement + "|" + c.userGuid;
+      return url_to_iframe[url_data] = iframeAndContainer;
+    }
+  };
+  for (_i = 0, _len = containers.length; _i < _len; _i++) {
+    c = containers[_i];
+    _fn(c);
+  }
+  if (window.addEventListener) {
+    return window.addEventListener("message", receiveMessage, false);
+  } else if (window.attachEvent) {
+    return window.attachEvent("onmessage", receiveMessage);
+  }
+};
+
+window.$grv = jQuery;
+
+loadWidgets(jQuery);
+})();
